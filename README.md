@@ -111,6 +111,14 @@ El proyecto compilado se genera en:
 dist/tp-final-angular
 ```
 
+## Despliegue
+Para compilar y desplegar la aplicación automáticamente en GitHub Pages, ejecuta el siguiente comando configurado en el proyecto:
+
+```bash
+npm run deploy
+```
+GitHub Pages: https://paolagiannattasio.github.io/tp-final-angular/
+
 ## Funcionalidades implementadas
 
 - Routing principal.
