@@ -1,0 +1,26 @@
+<h1>Usuarios</h1>
+
+<a routerLink="/usuarios/crear">Crear usuario</a>
+
+<div class="usuarios">
+  <div class="card" *ngFor="let usuario of usuarios">
+    <h2>{{ usuario.nombre }}</h2>
+
+    <p>Email: {{ usuario.email }}</p>
+    <p>Rol: {{ usuario.rol }}</p>
+    <p>Estado: {{ usuario.activo ? 'Activo' : 'Inactivo' }}</p>
+
+    <button [routerLink]="['/usuarios', usuario.id]">
+      Ver detalle
+    </button>
+
+    <button (click)="eliminar(usuario.id)">
+      Eliminar
+    </button>
+
+    <button (click)="cambiarEstado(usuario.id)">
+  Cambiar estado
+</button>
+
+  </div>
+</div>

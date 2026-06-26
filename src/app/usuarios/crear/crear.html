@@ -1,0 +1,20 @@
+<h1>Crear usuario</h1>
+
+<form [formGroup]="formulario" (ngSubmit)="guardar()">
+
+  <label>Nombre</label>
+  <input type="text" formControlName="nombre">
+
+  <label>Email</label>
+  <input type="email" formControlName="email">
+
+  <label>Rol</label>
+  <input type="text" formControlName="rol">
+
+  <br><br>
+
+  <button type="submit" [disabled]="formulario.invalid">
+    Guardar
+  </button>
+
+</form>

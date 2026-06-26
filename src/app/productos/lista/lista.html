@@ -1,0 +1,22 @@
+<h1>Productos</h1>
+
+<div class="productos">
+  <div class="card" *ngFor="let producto of productos">
+    <h2>{{ producto.titulo }}</h2>
+
+    <p><strong>Precio:</strong> {{ producto.precio | currency:'ARS':'symbol':'1.0-0' }}</p>
+    <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
+
+    <p *ngIf="producto.descuento">
+      <strong>Descuento:</strong> {{ producto.descuento }}%
+    </p>
+
+    <button [routerLink]="['/productos', producto.id]">
+      Ver detalle
+    </button>
+
+    <button (click)="eliminar(producto.id)">
+      Eliminar
+    </button>
+  </div>
+</div>

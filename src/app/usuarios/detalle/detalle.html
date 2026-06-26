@@ -1,0 +1,15 @@
+<div *ngIf="usuario; else noEncontrado">
+  <h1>Detalle del usuario</h1>
+
+  <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+  <p><strong>Email:</strong> {{ usuario.email }}</p>
+  <p><strong>Rol:</strong> {{ usuario.rol }}</p>
+  <p><strong>Estado:</strong> {{ usuario.activo ? 'Activo' : 'Inactivo' }}</p>
+
+  <a routerLink="/usuarios">Volver a usuarios</a>
+</div>
+
+<ng-template #noEncontrado>
+  <h1>Usuario no encontrado</h1>
+  <a routerLink="/usuarios">Volver a usuarios</a>
+</ng-template>
